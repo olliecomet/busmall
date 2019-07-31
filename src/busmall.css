@@ -1,6 +1,7 @@
-h2 {
+h2, h3 {
     display: flex;
     justify-content: center;
+    margin: 0.5%;
 }
 
 input {
@@ -14,7 +15,8 @@ div {
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 35px;
-    height: 530px;
+    height: 515px;
+    margin-bottom: 0.5%;
 }
 
 label {
