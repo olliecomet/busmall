@@ -14,6 +14,7 @@ header {
     background: teal;
     justify-content: space-evenly;
     font-size: 20px;
+    height: 80px;
 }
 
 .hidden {

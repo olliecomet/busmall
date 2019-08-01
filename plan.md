@@ -42,4 +42,4 @@
     - Hide the quiz
     - Get data on user choices and number of appearances
     - Show user results in graph form
-
+    
