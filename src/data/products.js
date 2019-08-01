@@ -36,8 +36,8 @@ const products = [
     },
     {
         id: 'cthulhu',
-        name: 'Cthulu',
-        image: 'assets/cthulu.jpg'
+        name: 'Cthulhu',
+        image: 'assets/cthulhu.jpg'
     },
     {
         id: 'dog-duck',
@@ -72,7 +72,7 @@ const products = [
     {
         id: 'sweep',
         name: 'Sweep',
-        image: 'assets/sweep.jpg'
+        image: 'assets/sweep.png'
     },
     {
         id: 'tauntaun',
