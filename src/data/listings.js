@@ -16,12 +16,25 @@ class Listing {
         return product;
     }
 
+    removeProductById(id) {
+        const list = this.list;
+
+        for(let i = 0; i < list.length; i++) {
+            const product = list[i];
+
+            if(product.id === id) {
+                list.splice(i, 1);
+            }
+        }
+    }
+
     getThreeRandomProducts() {
         let subList = [];
         
         for(let i = 0; i < 3; i++) {
             const item = this.getRandomProduct();
-            subList.push(item);
+            subList.push(item); 
+            this.removeProductById(item.id);
         }
 
         return subList;

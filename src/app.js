@@ -11,10 +11,8 @@ const mainListing = new Listing(products);
 
 const firstThreeProducts = mainListing.getThreeRandomProducts();
 
-renderInput(left, firstThreeProducts[0]);
-renderInput(middle, firstThreeProducts[1]);
-renderInput(right, firstThreeProducts[2]);
+const leftInput = renderInput(left, firstThreeProducts[0]);
+const middleInput = renderInput(middle, firstThreeProducts[1]);
+const rightInput = renderInput(right, firstThreeProducts[2]);
 
-
-
-
+// add for loop to add event listeners to all input things
