@@ -16,6 +16,18 @@ class Listing {
         return product;
     }
 
+    findProductById(list, id) {
+        const foundProduct = list.find(item => {
+
+            if(item.id === id) {
+                return item; 
+            }
+            
+        });
+
+        return foundProduct;
+    }
+
     removeProductById(id) {
         const list = this.list;
 

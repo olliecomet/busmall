@@ -3,6 +3,7 @@ function renderInput(inputDisplay, product) {
     input.value = product.id;
     const img = inputDisplay.querySelector('img');
     img.src = product.image;
+    img.alt = product.id;
 }
 
 export default renderInput;

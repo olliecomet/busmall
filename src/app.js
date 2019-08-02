@@ -5,32 +5,73 @@ import renderInput from './render-products.js';
 const left = document.getElementById('left');
 const middle = document.getElementById('middle');
 const right = document.getElementById('right');
-const radioInputs = document.querySelectorAll('input[name=product]');
 const counter = document.getElementById('round-counter');
+const userChoice = document.getElementById('user-choice');
 
 let rounds = 0;
 let live = true;
-let selectedProducts = [];
 
 const products = store.getProducts();
 const mainListing = new Listing(products);
-const firstThreeProducts = mainListing.getThreeRandomProducts();
+let firstThreeProducts = mainListing.getThreeRandomProducts();
 
-const leftInput = renderInput(left, firstThreeProducts[0]);
-const middleInput = renderInput(middle, firstThreeProducts[1]);
-const rightInput = renderInput(right, firstThreeProducts[2]);
+let leftInput = renderInput(left, firstThreeProducts[0]);
+let middleInput = renderInput(middle, firstThreeProducts[1]);
+let rightInput = renderInput(right, firstThreeProducts[2]);
 
-for(let i = 0; i < radioInputs.length; i++){
-    const radioInput = radioInputs[i];
-    radioInput.addEventListener('input', handleUserChoice);
+for(let i = 0; i < firstThreeProducts.length; i++) {
+    const shownProduct = products.find(item => {
+
+        if(item.id === firstThreeProducts[i].id) {
+            return item;
+        }
+
+    });
+
+    shownProduct.shown++;
 }
 
-function handleUserChoice(event) {
+store.save('products', products);
+
+userChoice.addEventListener('click', (event) => {
     if(!live) {
         return;
     }
 
+    event.preventDefault();    
+
+    const localProducts = store.getProducts();
+
+    const selectedProduct = localProducts.find(item => {
+
+        if(item.id === event.target.alt) {
+            return item;
+        }
+    });
+
+    for(let i = 0; i < firstThreeProducts.length; i++) {
+        const shownProduct = localProducts.find(item => {
     
+            if(item.id === firstThreeProducts[i].id) {
+                return item;
+            }
+    
+        });
+    
+        shownProduct.shown++;
+    }
+
+    selectedProduct.selected++;
+
+    store.save('products', localProducts);
+
+    const products = store.getProducts();
+    const mainListing = new Listing(products);
+    firstThreeProducts = mainListing.getThreeRandomProducts();
+
+    leftInput = renderInput(left, firstThreeProducts[0]);
+    middleInput = renderInput(middle, firstThreeProducts[1]);
+    rightInput = renderInput(right, firstThreeProducts[2]);
 
     rounds++;
     counter.textContent = rounds;
@@ -38,4 +79,5 @@ function handleUserChoice(event) {
     if(rounds === 25) {
         live = false;
     }
-}
+
+});
