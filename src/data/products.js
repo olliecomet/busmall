@@ -5,7 +5,7 @@ const products = [
         image: 'assets/bag.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'banana',
@@ -13,7 +13,7 @@ const products = [
         image: 'assets/banana.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'bathroom',
@@ -21,7 +21,7 @@ const products = [
         image: 'assets/bathroom.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'boots',
@@ -29,7 +29,7 @@ const products = [
         image: 'assets/boots.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'breakfast',
@@ -37,7 +37,7 @@ const products = [
         image: 'assets/breakfast.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'bubblegum',
@@ -45,7 +45,7 @@ const products = [
         image: 'assets/bubblegum.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'chair',
@@ -53,7 +53,7 @@ const products = [
         image: 'assets/chair.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'cthulhu',
@@ -61,7 +61,7 @@ const products = [
         image: 'assets/cthulhu.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'dog-duck',
@@ -69,7 +69,7 @@ const products = [
         image: 'assets/dog-duck.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'dragon',
@@ -77,7 +77,7 @@ const products = [
         image: 'assets/dragon.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'pen',
@@ -85,7 +85,7 @@ const products = [
         image: 'assets/pen.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'pet-sweep',
@@ -93,7 +93,7 @@ const products = [
         image: 'assets/pet-sweep.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'scissors',
@@ -101,7 +101,7 @@ const products = [
         image: 'assets/scissors.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'shark',
@@ -109,7 +109,7 @@ const products = [
         image: 'assets/shark.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'sweep',
@@ -117,7 +117,7 @@ const products = [
         image: 'assets/sweep.png',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'tauntaun',
@@ -125,7 +125,7 @@ const products = [
         image: 'assets/tauntaun.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'unicorn',
@@ -133,7 +133,7 @@ const products = [
         image: 'assets/unicorn.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'usb',
@@ -141,7 +141,7 @@ const products = [
         image: 'assets/usb.gif',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'water-can',
@@ -149,7 +149,7 @@ const products = [
         image: 'assets/water-can.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     },
     {
         id: 'wine-glass',
@@ -157,7 +157,7 @@ const products = [
         image: 'assets/wine-glass.jpg',
         shown: 0,
         selected: 0,
-        shownLast: false
+        shownLast: 0
     }
 ];
 

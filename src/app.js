@@ -19,6 +19,13 @@ let leftInput = renderInput(left, firstThreeProducts[0]);
 let middleInput = renderInput(middle, firstThreeProducts[1]);
 let rightInput = renderInput(right, firstThreeProducts[2]);
 
+products.map(item => {
+    if(item.shownLast === 2) {
+        item.shownLast = 0;
+    }
+
+});
+
 for(let i = 0; i < firstThreeProducts.length; i++) {
     const shownProduct = products.find(item => {
 
@@ -29,6 +36,7 @@ for(let i = 0; i < firstThreeProducts.length; i++) {
     });
 
     shownProduct.shown++;
+    shownProduct.shownLast++;
 }
 
 store.save('products', products);
@@ -59,6 +67,7 @@ userChoice.addEventListener('click', (event) => {
         });
     
         shownProduct.shown++;
+        shownProduct.shownLast++;
     }
 
     selectedProduct.selected++;
@@ -79,5 +88,4 @@ userChoice.addEventListener('click', (event) => {
     if(rounds === 25) {
         live = false;
     }
-
 });

@@ -22,7 +22,7 @@ class Listing {
             if(item.id === id) {
                 return item; 
             }
-            
+
         });
 
         return foundProduct;
@@ -45,7 +45,8 @@ class Listing {
         
         for(let i = 0; i < 3; i++) {
             const item = this.getRandomProduct();
-            subList.push(item); 
+            subList.push(item);     
+
             this.removeProductById(item.id);
         }
 
