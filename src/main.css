@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgreen;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    color: white;
+    background: teal;
+    justify-content: space-evenly;
+    font-size: 20px;
+    height: 80px;
+}
+
+button {
+    position: absolute;
+    bottom: 225px;
+    width: 200px;
+    height: 40px;
+    background: lightgreen;
+}
+
+.hidden {
+    display: none;
+}
