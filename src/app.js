@@ -93,6 +93,10 @@ userChoice.addEventListener('click', (event) => {
 
     if(rounds === 25) {
         live = false;
+        
+        left.classList.add('hidden');
+        middle.classList.add('hidden');
+        right.classList.add('hidden');
         resultButton.classList.remove('hidden');
     }
 });
