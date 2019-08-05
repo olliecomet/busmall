@@ -42,14 +42,16 @@ class Listing {
 
     getThreeRandomProducts() {
         let subList = [];
-        
-        for(let i = 0; i < 3; i++) {
+    
+        for(let i = 0; i < subList.length; i++) {
             const item = this.getRandomProduct();
-            subList.push(item);     
-
-            this.removeProductById(item.id);
+            
+            if(item.shownLast !== 1) {
+                item.shownLast++;
+                subList.push(item);
+            }
         }
-
+    
         return subList;
     }
 }

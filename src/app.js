@@ -7,6 +7,7 @@ const middle = document.getElementById('middle');
 const right = document.getElementById('right');
 const counter = document.getElementById('round-counter');
 const userChoice = document.getElementById('user-choice');
+const resultButton = document.getElementById('result-button');
 
 let rounds = 0;
 let live = true;
@@ -15,9 +16,9 @@ const products = store.getProducts();
 const mainListing = new Listing(products);
 let firstThreeProducts = mainListing.getThreeRandomProducts();
 
-let leftInput = renderInput(left, firstThreeProducts[0]);
-let middleInput = renderInput(middle, firstThreeProducts[1]);
-let rightInput = renderInput(right, firstThreeProducts[2]);
+renderInput(left, firstThreeProducts[0]);
+renderInput(middle, firstThreeProducts[1]);
+renderInput(right, firstThreeProducts[2]);
 
 products.map(item => {
     if(item.shownLast === 2) {
@@ -36,7 +37,6 @@ for(let i = 0; i < firstThreeProducts.length; i++) {
     });
 
     shownProduct.shown++;
-    shownProduct.shownLast++;
 }
 
 store.save('products', products);
@@ -46,9 +46,16 @@ userChoice.addEventListener('click', (event) => {
         return;
     }
 
-    event.preventDefault();    
-
+    event.preventDefault();  
+    
     const localProducts = store.getProducts();
+    
+    localProducts.map(item => {
+        if(item.shownLast === 2) {
+            item.shownLast = 0;
+        }
+    
+    });
 
     const selectedProduct = localProducts.find(item => {
 
@@ -67,7 +74,6 @@ userChoice.addEventListener('click', (event) => {
         });
     
         shownProduct.shown++;
-        shownProduct.shownLast++;
     }
 
     selectedProduct.selected++;
@@ -78,14 +84,15 @@ userChoice.addEventListener('click', (event) => {
     const mainListing = new Listing(products);
     firstThreeProducts = mainListing.getThreeRandomProducts();
 
-    leftInput = renderInput(left, firstThreeProducts[0]);
-    middleInput = renderInput(middle, firstThreeProducts[1]);
-    rightInput = renderInput(right, firstThreeProducts[2]);
+    renderInput(left, firstThreeProducts[0]);
+    renderInput(middle, firstThreeProducts[1]);
+    renderInput(right, firstThreeProducts[2]);
 
     rounds++;
     counter.textContent = rounds;
 
     if(rounds === 25) {
         live = false;
+        resultButton.classList.remove('hidden');
     }
 });

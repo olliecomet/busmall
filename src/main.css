@@ -17,6 +17,13 @@ header {
     height: 80px;
 }
 
+button {
+    position: absolute;
+    bottom: 0px;
+    background: lightgreen;
+    margin: 10px;
+}
+
 .hidden {
     display: none;
 }
